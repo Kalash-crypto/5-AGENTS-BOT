@@ -1,0 +1,39 @@
+{
+  "name": "grokcore-trading-desk",
+  "version": "1.0.0",
+  "description": "GrokCore Trading Desk - multi-agent crypto trading system for Solana-first research and live execution.",
+  "private": true,
+  "type": "commonjs",
+  "main": "dist/src/index.js",
+  "bin": {
+    "grokcore": "dist/src/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/src/cli.js",
+    "research": "tsx src/cli.ts --mode research",
+    "trade": "tsx src/cli.ts --mode live --live"
+  },
+  "keywords": [
+    "crypto",
+    "trading",
+    "solana",
+    "multi-agent",
+    "typescript"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@solana/spl-token": "^0.3.11",
+    "@solana/web3.js": "^1.95.5",
+    "axios": "^1.7.7",
+    "commander": "^12.1.1",
+    "dotenv": "^16.4.5",
+    "winston": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}
